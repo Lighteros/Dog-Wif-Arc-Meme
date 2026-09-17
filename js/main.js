@@ -60,7 +60,7 @@
   };
 
   caChip.addEventListener("click", async () => {
-    const value = caChip.getAttribute("data-copy") || "TBA";
+    const value = caChip.getAttribute("data-copy") || "0xdc219a5a3ebee7d8490a5cdbfa5706d91f712c2f";
     await copyValue(value);
     caStatus.textContent = "Copied";
     window.setTimeout(() => {
@@ -70,7 +70,7 @@
 
   addArc.addEventListener("click", async () => {
     if (!window.ethereum) {
-      window.open("https://app.uniswap.org/swap?chain=arc", "_blank", "noopener,noreferrer");
+      window.open("https://app.uniswap.org/swap?chain=arc&outputCurrency=0xdc219a5a3ebee7d8490a5cdbfa5706d91f712c2f", "_blank", "noopener,noreferrer");
       return;
     }
     try {
