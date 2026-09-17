@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dog Wif Arc | $WIF</title>
+  <meta name="description" content="Dog Wif Arc ($WIF) — literally just a dog wif Arc on his hat. The navy beanie memecoin on Arc chain." />
+  <meta property="og:title" content="Dog Wif Arc | $WIF" />
+  <meta property="og:description" content="Literally just a dog wif Arc on his hat." />
+  <meta property="og:image" content="logo.png" />
+  <meta name="theme-color" content="#06101c" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="spot" aria-hidden="true"></div>
+  <canvas id="orbit-field" aria-hidden="true"></canvas>
+
+  <div class="sky" aria-hidden="true">
+    <div class="aurora aurora-a"></div>
+    <div class="aurora aurora-b"></div>
+    <div class="aurora aurora-c"></div>
+    <div class="horizon-arc"></div>
+    <div class="rib-wash"></div>
+    <svg class="arch-ghost" viewBox="0 0 200 140" fill="none">
+      <path d="M28 118 C28 48 172 48 172 118" stroke="url(#archGlow)" stroke-width="14" stroke-linecap="round" />
+      <defs>
+        <linearGradient id="archGlow" x1="28" y1="40" x2="172" y2="118">
+          <stop offset="0%" stop-color="#4eb6ff" stop-opacity="0.12" />
+          <stop offset="50%" stop-color="#d7ecff" stop-opacity="0.28" />
+          <stop offset="100%" stop-color="#4eb6ff" stop-opacity="0.12" />
+        </linearGradient>
+      </defs>
+    </svg>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#hero">
+      <span class="brand-mark">
+        <img src="logo.png" alt="Dog Wif Arc" />
+      </span>
+      <span class="brand-copy">
+        <strong>Dog Wif Arc</strong>
+        <small>$WIF</small>
+      </span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#about">About</a>
+      <a href="#howtobuy">How to Buy</a>
+      <a href="#chart">Chart</a>
+      <a href="#joinus">Join Us</a>
+    </nav>
+    <div class="nav-tools">
+      <a class="icon-btn" href="https://x.com/DogWifArcHat" target="_blank" rel="noopener noreferrer" aria-label="Dog Wif Arc on X">
+        <img src="icons/x.svg" alt="" />
+      </a>
+      <a class="icon-btn" href="https://dexscreener.com/arc" target="_blank" rel="noopener noreferrer" aria-label="DexScreener on Arc">
+        <img src="icons/dexscreener.svg" alt="" />
+      </a>
+      <a class="buy-btn" href="https://app.uniswap.org/swap?chain=arc" target="_blank" rel="noopener noreferrer">
+        <img src="icons/uniswap.svg" alt="" />
+        <span>Buy $WIF</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Dog Wif Arc</span><span>$WIF</span><span>Arc Chain</span><span>navy beanie</span><span>literally just a dog</span><span>wif Arc on his hat</span>
+      <span>Dog Wif Arc</span><span>$WIF</span><span>Arc Chain</span><span>navy beanie</span><span>literally just a dog</span><span>wif Arc on his hat</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-copy lift">
+        <p class="kicker">
+          <svg class="mini-arch" viewBox="0 0 40 28" fill="none" aria-hidden="true">
+            <path d="M6 24 C6 10 34 10 34 24" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+          </svg>
+          Live on Arc Chain
+        </p>
+        <h1>
+          <span class="chrome">Dog Wif Arc</span>
+        </h1>
+        <p class="symbol-pill">$WIF</p>
+        <p class="lede">Literally just a dog wif Arc on his hat.</p>
+        <p class="sub">
+          A cream-coated Shiba, a ribbed navy beanie, and the white Arc mark stitched on top.
+          No lore committee. No extra plot. The hat is the whole thesis.
+        </p>
+        <div class="hero-actions">
+          <a class="buy-btn solid" href="https://app.uniswap.org/swap?chain=arc" target="_blank" rel="noopener noreferrer">
+            <img src="icons/uniswap.svg" alt="" />
+            <span>Swap on Uniswap</span>
+          </a>
+          <a class="ghost-btn" href="https://dexscreener.com/arc" target="_blank" rel="noopener noreferrer">
+            <img src="icons/dexscreener.svg" alt="" />
+            <span>Arc Chart</span>
+          </a>
+        </div>
+        <button class="ca-chip" type="button" data-copy="TBA" aria-label="Copy contract address">
+          <span class="ca-label">CA</span>
+          <code id="ca-value">TBA</code>
+          <span class="ca-status" id="ca-status">Copy</span>
+        </button>
+      </div>
+
+      <div class="hero-stage lift delay-1">
+        <div class="orbit ring-a"></div>
+        <div class="orbit ring-b"></div>
+        <div class="orbit ring-c"></div>
+        <div class="orbit-spark s1"></div>
+        <div class="orbit-spark s2"></div>
+        <div class="orbit-spark s3"></div>
+        <figure class="portrait">
+          <img src="logo.png" alt="Shiba wearing a navy Arc beanie" />
+        </figure>
+        <p class="portrait-caption">The hat. The dog. The chain.</p>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-head lift">
+        <p class="kicker">About</p>
+        <h2>A warm face under a cold-weather mark.</h2>
+      </div>
+      <div class="about-grid">
+        <figure class="about-portrait lift">
+          <div class="rib-frame">
+            <img src="logo.png" alt="Dog Wif Arc portrait" />
+          </div>
+        </figure>
+        <div class="about-copy lift delay-1">
+          <p>
+            Dog Wif Arc is the simplest read on Circle's Arc: take the arch, sew it onto a navy knit,
+            and put it on a Shiba who did not ask for a whitepaper. The cream coat, the black nose,
+            the deadpan stare — that is the product.
+          </p>
+          <p>
+            $WIF lives on Arc, where fees settle in USDC and Uniswap is the desk. The site keeps the
+            same night-blue field as the campaign still: electric rims, chrome lettering, one dog in a beanie.
+          </p>
+          <ul class="traits">
+            <li>
+              <span class="trait-num">01</span>
+              <div>
+                <h3>The hat is the brand</h3>
+                <p>Ribbed navy wool. White Arc stitch. Nothing else on the head.</p>
+              </div>
+            </li>
+            <li>
+              <span class="trait-num">02</span>
+              <div>
+                <h3>The face does not flinch</h3>
+                <p>Studio-quiet Shiba energy. Cream fur against a void of neon blue.</p>
+              </div>
+            </li>
+            <li>
+              <span class="trait-num">03</span>
+              <div>
+                <h3>The chain is Arc</h3>
+                <p>Mainnet 5042. Swap on Uniswap. Tape on DexScreener /arc.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="howtobuy" id="howtobuy">
+      <div class="section-head lift">
+        <p class="kicker">How to Buy</p>
+        <h2>Four stitches to $WIF.</h2>
+      </div>
+      <div class="stitch-rail" aria-hidden="true"></div>
+      <ol class="stitches">
+        <li class="stitch lift">
+          <span class="stitch-index">01</span>
+          <h3>Seat a wallet on Arc</h3>
+          <p>Add Arc mainnet. Chain ID 5042. RPC at rpc.mainnet.arc.io. Explorer at explorer.arc.io. Gas is USDC.</p>
+          <button class="ghost-btn slim" type="button" id="add-arc">Add Arc Network</button>
+        </li>
+        <li class="stitch lift delay-1">
+          <span class="stitch-index">02</span>
+          <h3>Fund with USDC</h3>
+          <p>Bridge or receive USDC on Arc. That same balance pays the swap and the network fee. No side gas token.</p>
+        </li>
+        <li class="stitch lift delay-2">
+          <span class="stitch-index">03</span>
+          <h3>Swap on Uniswap</h3>
+          <p>Open Uniswap with the Arc chain selected, paste the $WIF contract when it is live, and confirm the pair.</p>
+          <a class="text-link" href="https://app.uniswap.org/swap?chain=arc" target="_blank" rel="noopener noreferrer">
+            <img src="icons/uniswap.svg" alt="" />
+            app.uniswap.org
+          </a>
+        </li>
+        <li class="stitch lift delay-3">
+          <span class="stitch-index">04</span>
+          <h3>Read the Arc tape</h3>
+          <p>The only book this site embeds is DexScreener on Arc. Confirm you are on /arc before you size anything.</p>
+          <a class="text-link" href="https://dexscreener.com/arc" target="_blank" rel="noopener noreferrer">
+            <img src="icons/dexscreener.svg" alt="" />
+            dexscreener.com/arc
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <section class="chart" id="chart">
+      <div class="section-head lift">
+        <p class="kicker">Chart</p>
+        <h2>DexScreener, Arc only.</h2>
+        <a class="text-link" href="https://dexscreener.com/arc" target="_blank" rel="noopener noreferrer">
+          <img src="icons/dexscreener.svg" alt="" />
+          Open Arc on DexScreener
+        </a>
+      </div>
+      <div class="chart-bezel lift">
+        <div class="bezel-rail" aria-hidden="true">
+          <span>ARC</span>
+          <span>$WIF</span>
+          <span>UNISWAP</span>
+          <span>DEXSCREENER</span>
+        </div>
+        <iframe
+          title="DexScreener Arc chart"
+          src="https://dexscreener.com/arc?embed=1&theme=dark&info=0&trades=0"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <section class="joinus" id="joinus">
+      <div class="section-head lift">
+        <p class="kicker">Join Us</p>
+        <h2>The beanie has a feed.</h2>
+      </div>
+      <figure class="join-banner lift">
+        <img src="banner.png" alt="Dog Wif Arc campaign banner in a three by one frame" />
+        <div class="banner-sheen" aria-hidden="true"></div>
+      </figure>
+      <div class="join-card lift">
+        <p>
+          Notices, stills, and the occasional very serious dog land at @DogWifArcHat.
+          The sheet above is the only banner on this site: chrome name, glowing Arc, navy hat, one Shiba.
+        </p>
+        <div class="join-row">
+          <a class="buy-btn solid" href="https://x.com/DogWifArcHat" target="_blank" rel="noopener noreferrer">
+            <img src="icons/x.svg" alt="" />
+            <span>Follow @DogWifArcHat</span>
+          </a>
+          <a class="ghost-btn" href="https://app.uniswap.org/swap?chain=arc" target="_blank" rel="noopener noreferrer">
+            <img src="icons/uniswap.svg" alt="" />
+            <span>Uniswap</span>
+          </a>
+          <a class="ghost-btn" href="https://dexscreener.com/arc" target="_blank" rel="noopener noreferrer">
+            <img src="icons/dexscreener.svg" alt="" />
+            <span>DexScreener</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <a class="brand" href="#hero">
+      <span class="brand-mark">
+        <img src="logo.png" alt="" />
+      </span>
+      <span class="brand-copy">
+        <strong>Dog Wif Arc</strong>
+        <small>$WIF on Arc</small>
+      </span>
+    </a>
+    <p>Literally just a dog wif Arc on his hat.</p>
+    <div class="foot-links">
+      <a href="https://x.com/DogWifArcHat" target="_blank" rel="noopener noreferrer">
+        <img src="icons/x.svg" alt="" /> X
+      </a>
+      <a href="https://dexscreener.com/arc" target="_blank" rel="noopener noreferrer">
+        <img src="icons/dexscreener.svg" alt="" /> DexScreener
+      </a>
+      <a href="https://app.uniswap.org/swap?chain=arc" target="_blank" rel="noopener noreferrer">
+        <img src="icons/uniswap.svg" alt="" /> Uniswap
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
